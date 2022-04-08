@@ -10,7 +10,8 @@ const Register = () => {
         <input type="email" placeholder="Your Email" />
         <br />
         <input type="password" name="" id="" placeholder="Password"/>
-        <input type="submit" value="Register" />
+        <br />
+        <input style={{margin:'20px', color:'white',backgroundColor:'green', padding:'10px', fontWeight:'700', borderRadius:'10px'}} type="submit" value="Register" />
       </form>
     </div>
   );
