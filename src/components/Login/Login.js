@@ -1,40 +1,40 @@
-// import { getAuth } from "firebase/auth";
-// import React from "react";
-// import {useSignInWithGoogle} from 'react-firebase-hooks/auth'
-// import { useLocation, useNavigate } from "react-router-dom";
-// import app from "../../firebase.init";
+import { getAuth } from "firebase/auth";
+import React from "react";
+import {useSignInWithGoogle} from 'react-firebase-hooks/auth'
+import { useLocation, useNavigate } from "react-router-dom";
+import app from "../../firebase.init";
 
-// const auth = getAuth(app)
+const auth = getAuth(app)
 
-// const Login = () => {
-//    const [signInWithGoogle] = useSignInWithGoogle(auth)
-//    const location = useLocation();
-//    const navigate = useNavigate();
+const Login = () => {
+   const [signInWithGoogle] = useSignInWithGoogle(auth)
+   const location = useLocation();
+   const navigate = useNavigate();
 
-//     const from = location?.state?.from?.pathname || '/';
+    const from = location?.state?.from?.pathname || '/';
 
-//    const handleGoogleSignIn = () => {
-//      signInWithGoogle()
-//       .then(() =>{
-//         navigate(from, {replace: true})
-//       })
-//   }
-//   return (
-//     <div>
-//       <h3>Please Login</h3>
-//       <div style={{margin:'20px', color:'blue'}}>
-//       <button style={{margin:'2px', color:'white',backgroundColor:'green', padding:'10px', fontWeight:'700', borderRadius:'10px'}} onClick={handleGoogleSignIn}>Google Sign In</button>
-//       </div>
+   const handleGoogleSignIn = () => {
+     signInWithGoogle()
+      .then(() =>{
+        navigate(from, {replace: true})
+      })
+  }
+  return (
+    <div>
+      <h3>Please Login</h3>
+      <div style={{margin:'20px', color:'blue'}}>
+      <button style={{margin:'2px', color:'white',backgroundColor:'green', padding:'10px', fontWeight:'700', borderRadius:'10px'}} onClick={handleGoogleSignIn}>Google Sign In</button>
+      </div>
       
-//       <form>
-//         <input type="email" placeholder="Your Email" />
-//         <br />
-//         <input type="password" name="" id="" placeholder="Password" />
-//         <br />
-//         <input style={{margin:'5px', color:'white',backgroundColor:'green', padding:'10px', fontWeight:'700', borderRadius:'10px'}} type="submit" value="Login" />
-//       </form>   
-//     </div>
-//   );
-// };
+      <form>
+        <input type="email" placeholder="Your Email" />
+        <br />
+        <input type="password" name="" id="" placeholder="Password" />
+        <br />
+        <input style={{margin:'5px', color:'white',backgroundColor:'green', padding:'10px', fontWeight:'700', borderRadius:'10px'}} type="submit" value="Login" />
+      </form>   
+    </div>
+  );
+};
 
-// export default Login;
+export default Login;
