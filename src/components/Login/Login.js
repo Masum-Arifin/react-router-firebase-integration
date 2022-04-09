@@ -2,12 +2,12 @@ import React from "react";
 import useFirebase from "../../hooks/useFirebase";
 
 const Login = () => {
-    const {sinInWithGoogle} = useFirebase(); 
+    const {signInWithGoogle} = useFirebase(); 
   return (
     <div>
       <h3>Please Login</h3>
       <div style={{margin:'20px', color:'blue'}}>
-      <button style={{margin:'2px', color:'white',backgroundColor:'green', padding:'10px', fontWeight:'700', borderRadius:'10px'}} onClick={sinInWithGoogle}>Google Sign In</button>
+      <button style={{margin:'2px', color:'white',backgroundColor:'green', padding:'10px', fontWeight:'700', borderRadius:'10px'}} onClick={signInWithGoogle}>Google Sign In</button>
       </div>
       
       <form>
